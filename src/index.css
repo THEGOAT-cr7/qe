@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* html,
+body,
+#root {
+  @apply h-full;
+}
+
+#root {
+  @apply flex flex-col;
+}
+@layer components {
+  main {
+    @apply flex grow;
+  }
+  .registration {
+    @apply bg-[url('https://picsum.photos/1200/800')] bg-center bg-no-repeat bg-cover h-full;
+  }
+} */
