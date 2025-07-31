@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
-      dispatch(_login(JSON.parse(storedUser))); // ✅ localdagi userni redux'ga yuklash
+      dispatch(_login(JSON.parse(storedUser)));
     }
   }, []);
   const routes = createBrowserRouter([

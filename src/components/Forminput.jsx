@@ -1,4 +1,4 @@
-function Forminput({ label, type, name }) {
+function FormInput({ label, type, name }) {
   return (
     <fieldset className="fieldset">
       <legend className="fieldset-legend">{label}</legend>
@@ -12,4 +12,4 @@ function Forminput({ label, type, name }) {
   );
 }
 
-export default Forminput;
+export default FormInput;

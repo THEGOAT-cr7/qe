@@ -1,5 +1,5 @@
-import FormInput from "../components/FormInput";
 import { Link } from "react-router-dom";
+import Forminput from "../components/Forminput";
 import { useSignup } from "../hooks/useSignup";
 import { toast } from "react-toastify";
 
@@ -25,10 +25,8 @@ function Signup() {
     <main>
       <div className="relative h-screen">
         <div className="lg:flex h-full">
-          {/* IMAGE — same as login */}
           <div className="lg:w-1/2 w-full h-full lg:h-full bg-[url('https://picsum.photos/1200/800')] bg-cover bg-center bg-no-repeat" />
 
-          {/* FORM */}
           <div className="lg:w-1/2 w-full flex items-center justify-center h-full lg:static absolute inset-0 z-10 px-4 bg-black/60 lg:bg-transparent text-white">
             <form
               onSubmit={handleSubmit}
@@ -36,10 +34,10 @@ function Signup() {
             >
               <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
 
-              <FormInput label="User Name" name="displayName" type="text" />
-              <FormInput label="Email" name="email" type="email" />
-              <FormInput label="Password" name="password" type="password" />
-              <FormInput
+              <Forminput label="User Name" name="displayName" type="text" />
+              <Forminput label="Email" name="email" type="email" />
+              <Forminput label="Password" name="password" type="password" />
+              <Forminput
                 label="Confirm Password"
                 name="confirmPassword"
                 type="password"
@@ -98,7 +96,7 @@ function Signup() {
                     Login
                   </Link>
                 </p>
-              </div>
+              </div>  
             </form>
           </div>
         </div>
@@ -108,4 +106,3 @@ function Signup() {
 }
 
 export default Signup;
-  

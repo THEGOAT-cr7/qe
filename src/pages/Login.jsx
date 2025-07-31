@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import FormInput from "../components/FormInput";
+import FormInput from "../components/Forminput";
 import { useLogin } from "../hooks/useLogin";
 
 function Login() {
