@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db } from "../firebase/config";
 import { toast } from "react-toastify";
 import { login } from "../app/feature/userSlice";
-import { addDoc, collection } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 
 export const useSignup = () => {
   const [isPending, setIsPending] = useState(false);
@@ -25,7 +25,7 @@ export const useSignup = () => {
         photoURL: avatarURL,
       });
 
-      await addDoc(collection(db, "users"), {
+      await setDoc(doc(db, "users", auth.currentUser.uid), {
         online: true,
         displayName: auth.currentUser.displayName,
         photoURL: avatarURL,

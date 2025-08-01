@@ -23,7 +23,7 @@ export const useLogin = () => {
         photoURL: user.photoURL || null,
       };
 
-      localStorage.setItem("user", JSON.stringify(userData));
+      // localStorage.setItem("user", JSON.stringify(userData));
       dispatch(_login(userData));
 
       toast.success(`Welcome, ${user.displayName || "User"}`);
