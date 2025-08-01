@@ -16,7 +16,6 @@ export const useLogin = () => {
       const user = res.user;
       if (!user) throw new Error("Authentication failed");
 
-      // Saqlash: foydalanuvchi ma'lumotlarini localStorage'ga
       const userData = {
         uid: user.uid,
         email: user.email,
@@ -24,8 +23,8 @@ export const useLogin = () => {
         photoURL: user.photoURL || null,
       };
 
-      localStorage.setItem("user", JSON.stringify(userData)); // ✅ SAVE TO LOCAL
-      dispatch(_login(userData)); // ✅ REDUXga yuboramiz
+      localStorage.setItem("user", JSON.stringify(userData));
+      dispatch(_login(userData));
 
       toast.success(`Welcome, ${user.displayName || "User"}`);
     } catch (error) {

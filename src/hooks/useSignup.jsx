@@ -27,9 +27,9 @@ export const useSignup = () => {
 
       await addDoc(collection(db, "users"), {
         online: true,
-        displayName: userName,
+        displayName: auth.currentUser.displayName,
         photoURL: avatarURL,
-        uid: res.user.uid,
+        uid: auth.currentUser.uid,
       });
 
       const token = await res.user.getIdToken();
