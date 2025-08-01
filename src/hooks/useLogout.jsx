@@ -15,10 +15,12 @@ export const useLogout = () => {
   const logout = async () => {
     setIsPending(true);
     try {
-      const user = doc(db, "users", auth.currentUser.uid);
-      // await updateDoc(user, {
-      //   online: false,
-      // });
+      if (auth.currentUser) {
+        const uid = auth.currentUser.uid;
+        const userRef = doc(db, "users", uid);
+        await updateDoc(userRef, { online: false });
+      }
+
       await signOut(auth);
       dispatch(logOut());
       toast.success(`Logged out successfully!`);

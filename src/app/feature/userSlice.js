@@ -17,6 +17,11 @@ const userSlice = createSlice({
     authReady: (state, { payload }) => {
       state.isAuthReady = true;
     },
+    online: (state, { payload }) => {
+      if (state.user) {
+        state.user.online = payload;
+      }
+    },
   },
 });
 export const { logOut, login, authReady } = userSlice.actions;

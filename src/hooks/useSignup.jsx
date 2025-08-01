@@ -26,6 +26,7 @@ export const useSignup = () => {
       });
 
       await setDoc(doc(db, "users", auth.currentUser.uid), {
+        email: auth.currentUser.email,
         online: true,
         displayName: auth.currentUser.displayName,
         photoURL: avatarURL,
@@ -38,7 +39,7 @@ export const useSignup = () => {
       dispatch(
         login({
           displayName: userName,
-          photoURL: avatarURL,
+          photoURL: avatarURL,  
           uid: res.user.uid,
           email: res.user.email,
         })
