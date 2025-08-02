@@ -45,9 +45,13 @@ export const useSignup = () => {
         })
       );
 
-      toast.success(`Welcome, ${userName}`);
+      toast.success(`Welcome, ${userName}`, {
+        position: "bottom-right",
+      });
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.message, {
+        position: "bottom-right",
+      });
     } finally {
       setIsPending(false);
     }

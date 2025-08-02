@@ -23,9 +23,13 @@ export const useLogout = () => {
 
       await signOut(auth);
       dispatch(logOut());
-      toast.success(`Logged out successfully!`);
+      toast.success(`Logged out successfully!`, {
+        position: "bottom-right",
+      });
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.message, {
+        position: "bottom-right",
+      });
     } finally {
       setIsPending(false);
     }

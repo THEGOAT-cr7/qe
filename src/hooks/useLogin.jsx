@@ -32,9 +32,13 @@ export const useLogin = () => {
       // localStorage.setItem("user", JSON.stringify(userData));
       dispatch(_login(userData));
 
-      toast.success(`Welcome, ${user.displayName || "User"}`);
+      toast.success(`Welcome, ${user.displayName || "User"}`, {
+        position: "bottom-right",
+      });
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.message, {
+        position: "bottom-right",
+      });
     } finally {
       setIsPending(false);
     }

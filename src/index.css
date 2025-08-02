@@ -1,19 +1,53 @@
 @import "tailwindcss";
 @plugin "daisyui";
-/* html,
-body,
-#root {
-  @apply h-full;
+.chat-app {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
 }
 
-#root {
-  @apply flex flex-col;
+.chat-app .header {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
 }
-@layer components {
-  main {
-    @apply flex grow;
-  }
-  .registration {
-    @apply bg-[url('https://picsum.photos/1200/800')] bg-center bg-no-repeat bg-cover h-full;
-  }
-} */
+
+.messages {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.message {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.new-message-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.new-message-input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.send-button {
+  background: #101828;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
