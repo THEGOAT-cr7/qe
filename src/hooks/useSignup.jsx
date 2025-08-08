@@ -39,7 +39,7 @@ export const useSignup = () => {
       dispatch(
         login({
           displayName: userName,
-          photoURL: avatarURL,  
+          photoURL: avatarURL,
           uid: res.user.uid,
           email: res.user.email,
         })

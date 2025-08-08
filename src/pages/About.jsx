@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RealTime from "./realtime";
 
 const About = () => {
   const [showMore, setShowMore] = useState(false);
@@ -22,6 +23,7 @@ const About = () => {
 
   return (
     <div className="bg-[#F3F4F6] min-h-[100vh] py-10">
+      <RealTime/>
       <div className="max-w-7xl mx-auto p-6">
         <h1 className="text-4xl font-bold mb-6 text-black animate-fade-in">
           About Us
